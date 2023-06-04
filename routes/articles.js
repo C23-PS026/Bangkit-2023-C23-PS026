@@ -8,4 +8,4 @@ router.get('/', (req, res) => {
     res.json(articles)
 })
 
-module.exports = articles
+module.exports = router

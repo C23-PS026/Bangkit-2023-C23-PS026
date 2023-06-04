@@ -1,30 +1,30 @@
 const express = require('express')
+const cors = require('cors')
+const fs = require('fs')
 const app = express()
 
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 app.get('/', (req, res) => {
-    res.send('Welcome to MeatFYI (test)!')
+    res.json({
+        message: 'MeatFYI API is now live'
+    })
 })
 
-// const meat = require('./routes/meat.js')
-// app.use('/meat', meat)
+const meat = require('./routes/meat.js')
+app.use('/meat', meat)
 
-// const articles = require('./routes/articles.js')
-// app.use('/articles', articles)
-
-app.get('/articles', (req, res) => {
-    res.send('Anda mengakses /articles')
-})
+const articles = require('./routes/articles.js')
+app.use('/articles', articles)
 
 // Needs to be the last
 app.get('*', (req, res) => {
-    res.send('Invalid URL')
+    res.json({
+        message: 'Invalid URL'
+    })
 })
-
-// FOR DEVELOPMENT ONLY
-// app.listen(3000)
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {
