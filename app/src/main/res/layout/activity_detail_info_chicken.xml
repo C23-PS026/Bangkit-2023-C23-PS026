@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailInfoChickenActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_detail_chicken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="11dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:layout_constraintBottom_toTopOf="@id/webinfo_button_chick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/image_daging_ayam"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/daging_ayam" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_detail_chicken1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="@color/based"
+                    app:cardCornerRadius="12dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_namadaging_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Meat Name : Chicken"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_nutritionfacts_ayam"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_nutritionfacts_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Nutrition Facts"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_line_ayam"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_namadaging_ayam"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_line_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="-------------------------------------------"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_calories_ayam"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_nutritionfacts_ayam"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_calories_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="50dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Calories"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_line2_ayam"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_calories_ayam"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_line_ayam"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_value_calories_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="142"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_line2_ayam"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tv_calories_ayam"
+                            app:layout_constraintTop_toBottomOf="@id/tv_line_ayam"
+                            app:layout_constraintVertical_bias="0.0"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_line2_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="-------------------------------------------"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_fat_ayam"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_calories_ayam"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_fat_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="60dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Fat"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_protein_ayam"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_fat_ayam"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_line2_ayam"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_value_fat_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="26dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="3g"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_protein_ayam"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tv_fat_ayam"
+                            app:layout_constraintTop_toBottomOf="@id/tv_line2_ayam"
+                            app:layout_constraintVertical_bias="0.0"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_protein_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="50dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Protein"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_sugar_ayam"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_protein_ayam"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_fat_ayam"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_value_protein_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="80dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="27g"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_sugar_ayam"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.505"
+                            app:layout_constraintStart_toEndOf="@id/tv_fat_ayam"
+                            app:layout_constraintTop_toBottomOf="@id/tv_fat_ayam"
+                            app:layout_constraintVertical_bias="0.0"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_sugar_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="50dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Sugar"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_carbo_ayam"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_sugar_ayam"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_protein_ayam"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_value_sugar_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="0g"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_carbo_ayam"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tv_sugar_ayam"
+                            app:layout_constraintTop_toBottomOf="@id/tv_protein_ayam"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_carbo_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Carbohydrates"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_fiber_ayam"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_carbo_ayam"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_sugar_ayam"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_value_carbo_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="0g"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_fiber_ayam"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tv_carbo_ayam"
+                            app:layout_constraintTop_toBottomOf="@id/tv_sugar_ayam"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_fiber_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="45dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Fiber"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_line3_ayam"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_fiber_ayam"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_carbo_ayam"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_value_fiber_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="0g"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="@id/tv_line3_ayam"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tv_fiber_ayam"
+                            app:layout_constraintTop_toBottomOf="@id/tv_carbo_ayam"
+                            app:layout_constraintVertical_bias="0.0"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_line3_ayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="-------------------------------------------"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_fiber_ayam"></TextView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/webinfo_button_chick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/icon_info"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="0.05"
+            android:text="Click here for more information"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_detail_chicken">
+
+        </Button>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
