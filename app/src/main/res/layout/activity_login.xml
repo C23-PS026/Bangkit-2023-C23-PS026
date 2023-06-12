@@ -58,29 +58,48 @@
             app:layout_constraintTop_toBottomOf="@id/tv_login"
             tools:ignore="MissingConstraints" />
 
-        <EditText
-            android:id="@+id/password_et"
-            android:textColor="@color/white"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/white"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_password_login"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_height="match_parent"
+            app:hintEnabled="false"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/rectangle"
-            android:backgroundTint="@color/based"
-            android:drawableStart="@drawable/logo_password"
-            android:drawablePadding="10dp"
-            android:hint="Password"
-            android:inputType="text|textNoSuggestions"
-            android:padding="20dp"
-            android:textColorHint="@color/white"
+            app:boxBackgroundMode="none"
+            app:passwordToggleTint="@color/white"
             app:layout_constraintBottom_toTopOf="@id/login_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email_et"
-            tools:ignore="MissingConstraints" />
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/password_et"
+                android:textColor="@color/white"
+                app:passwordToggleEnabled="true"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@color/white"
+                app:passwordToggleTint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rectangle"
+                android:backgroundTint="@color/based"
+                android:drawableStart="@drawable/logo_password"
+                android:drawablePadding="10dp"
+                android:hint="Password"
+                android:inputType="text|textNoSuggestions"
+                android:padding="20dp"
+                android:textColorHint="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/login_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/email_et"
+                tools:ignore="MissingConstraints" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/login_button"
@@ -92,7 +111,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/tv_account"
-            app:layout_constraintTop_toBottomOf="@id/password_et" />
+            app:layout_constraintTop_toBottomOf="@id/input_password_login" />
 
         <TextView
             android:id="@+id/tv_account"

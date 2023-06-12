@@ -27,7 +27,7 @@ class DetailInfoChickenActivity : AppCompatActivity() {
 
     private fun linkToWeb(){
         binding.webinfoButtonChick.setOnClickListener{
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.webmd.com/diet/health-benefits-chicken"))
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.nutritionix.com/food/chicken"))
             startActivity(intent)
         }
     }

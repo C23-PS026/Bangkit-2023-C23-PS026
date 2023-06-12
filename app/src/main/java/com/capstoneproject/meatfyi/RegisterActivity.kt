@@ -29,6 +29,8 @@ class RegisterActivity : AppCompatActivity() {
         supportActionBar!!.hide()
         binding.passwordEtReg.inputType =
             InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+        binding.confirmPasswordEtReg.inputType =
+            InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
         auth = FirebaseAuth.getInstance()
         goToLogin()
         registerButton()
@@ -39,6 +41,7 @@ class RegisterActivity : AppCompatActivity() {
             val username = binding.usernameEtReg.text.toString()
             val email = binding.emailEtReg.text.toString()
             val password = binding.passwordEtReg.text.toString()
+            val confirmPass = binding.confirmPasswordEtReg.text.toString()
 
             if (username.isEmpty()) {
                 binding.usernameEtReg.error = "Username harus diisi"
@@ -66,7 +69,25 @@ class RegisterActivity : AppCompatActivity() {
                 binding.passwordEtReg.requestFocus()
                 return@setOnClickListener
             }
-            registFirebase(email, password)
+            if (confirmPass.isEmpty()) {
+                binding.confirmPasswordEtReg.error = "Password harus diisi"
+                binding.confirmPasswordEtReg.requestFocus()
+                return@setOnClickListener
+            }
+            if (confirmPass.length < 8) {
+                binding.confirmPasswordEtReg.error = "Password harus terdiri dari 8 karakter"
+                binding.confirmPasswordEtReg.requestFocus()
+                return@setOnClickListener
+            }
+
+            if(password != confirmPass || confirmPass != password){
+                binding.passwordEtReg.error = "Password tidak boleh berbeda"
+                binding.passwordEtReg.requestFocus()
+                binding.confirmPasswordEtReg.error = "Password tidak boleh berbeda"
+                binding.confirmPasswordEtReg.requestFocus()
+                return@setOnClickListener
+            }
+            registFirebase(email, confirmPass)
         }
     }
 

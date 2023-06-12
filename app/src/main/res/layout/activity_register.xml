@@ -14,7 +14,7 @@
             android:id="@+id/iv_logo_app"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_marginTop="50dp"
+
             android:src="@drawable/logo_meatfyi"
             app:layout_constraintBottom_toTopOf="@id/tv_login"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,6 +39,7 @@
         <EditText
             android:id="@+id/username_et_reg"
             android:textColor="@color/white"
+            android:cursorVisible="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -61,6 +62,7 @@
         <EditText
             android:id="@+id/email_et_reg"
             android:textColor="@color/white"
+            android:cursorVisible="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -74,36 +76,91 @@
             android:inputType="text|textNoSuggestions"
             android:padding="20dp"
             android:textColorHint="@color/white"
-            app:layout_constraintBottom_toTopOf="@id/password_et_reg"
+            app:layout_constraintBottom_toTopOf="@id/input_password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/username_et_reg"
             tools:ignore="MissingConstraints" />
 
-        <EditText
-            android:id="@+id/password_et_reg"
-            android:textColor="@color/white"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/white"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_height="match_parent"
+            app:hintEnabled="false"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/rectangle"
-            android:backgroundTint="@color/based"
-            android:drawableStart="@drawable/logo_password"
-            android:drawablePadding="10dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="20dp"
-            android:textColorHint="@color/white"
-            app:layout_constraintBottom_toTopOf="@id/reg_button"
+            app:boxBackgroundMode="none"
+            app:passwordToggleTint="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/confirm_password_et_reg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email_et_reg"
-            tools:ignore="MissingConstraints" />
+            app:passwordToggleEnabled="true">
 
+            <EditText
+                android:id="@+id/password_et_reg"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@color/white"
+                android:background="@drawable/rectangle"
+                android:backgroundTint="@color/based"
+                android:drawableStart="@drawable/logo_password"
+                android:drawablePadding="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="20dp"
+                android:textColorHint="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/confirm_password_et_reg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/email_et_reg"
+                tools:ignore="MissingConstraints" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="20dp"
+            app:hintEnabled="false"
+            app:boxBackgroundMode="none"
+            app:passwordToggleTint="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/reg_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_password"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/confirm_password_et_reg"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@color/white"
+                android:background="@drawable/rectangle"
+                android:backgroundTint="@color/based"
+                android:drawableStart="@drawable/logo_password"
+                android:drawablePadding="10dp"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="20dp"
+                android:textColorHint="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/reg_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_password"
+                tools:ignore="MissingConstraints" />
+
+        </com.google.android.material.textfield.TextInputLayout>
         <Button
             android:id="@+id/reg_button"
             android:layout_width="wrap_content"
@@ -114,7 +171,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/tv_account"
-            app:layout_constraintTop_toBottomOf="@id/password_et_reg" />
+            app:layout_constraintTop_toBottomOf="@id/input_confirm_password" />
 
         <TextView
             android:id="@+id/tv_account"

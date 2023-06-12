@@ -34,8 +34,8 @@
 
                 <ImageView
                     android:id="@+id/image_daging_sapi"
-                    android:layout_width="250dp"
-                    android:layout_height="250dp"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
                     android:layout_gravity="center"
                     android:scaleType="fitXY"
                     android:src="@drawable/daging_sapi" />
@@ -45,9 +45,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="5dp"
                     app:cardBackgroundColor="@color/based"
                     app:cardCornerRadius="12dp">
 
@@ -57,257 +55,583 @@
                         android:padding="10dp">
 
                         <TextView
-                            android:id="@+id/tv_namadaging"
+                            android:id="@+id/tv_namadaging_sapi"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="Meat Name : Beef"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Beef"
                             android:textAllCaps="false"
                             android:textColor="@color/white"
                             android:textSize="20sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_nutritionfacts"
+                            app:layout_constraintBottom_toTopOf="@id/tv_nutritionfacts_sapi"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"></TextView>
+                            app:layout_constraintTop_toTopOf="parent"/>
 
                         <TextView
-                            android:id="@+id/tv_nutritionfacts"
+                            android:id="@+id/tv_nutritionfacts_sapi"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
                             android:fontFamily="sans-serif-black"
                             android:text="Nutrition Facts"
                             android:textAllCaps="false"
                             android:textColor="@color/white"
                             android:textSize="20sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_line"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_namadaging"></TextView>
+                            app:layout_constraintBottom_toTopOf="@id/lines1"
+                            app:layout_constraintTop_toBottomOf="@id/tv_namadaging_sapi"/>
+
+                        <View
+                            android:id="@+id/lines1"
+                            android:layout_width="600dp"
+                            android:layout_height="2dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_serving_size"
+                            app:layout_constraintTop_toBottomOf="@id/tv_nutritionfacts_sapi" />
+
 
                         <TextView
-                            android:id="@+id/tv_line"
+                            android:id="@+id/tv_serving_size"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="-------------------------------------------"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Serving Size (100g)"
                             android:textAllCaps="false"
                             android:textColor="@color/white"
                             android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_calories"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_nutritionfacts"></TextView>
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@id/lines2"
+                            app:layout_constraintTop_toBottomOf="@id/lines1"/>
+
+                        <View
+                            android:id="@+id/lines2"
+                            android:layout_width="600dp"
+                            android:layout_height="6dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_calories_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_serving_size" />
+
 
                         <TextView
-                            android:id="@+id/tv_calories"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tv_calories_sapi"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="50dp"
+
                             android:fontFamily="sans-serif-black"
                             android:text="Calories"
                             android:textAllCaps="false"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_line2"
-                            app:layout_constraintEnd_toStartOf="@id/tv_value_calories"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_line"></TextView>
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines3"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_calories_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines2"/>
 
                         <TextView
-                            android:id="@+id/tv_value_calories"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tv_value_calories_sapi"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-black"
-                            android:text="265"
+                            android:gravity="end"
+                            android:text="259"
                             android:textAllCaps="false"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_line2"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@id/tv_calories"
-                            app:layout_constraintTop_toBottomOf="@id/tv_line"></TextView>
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines3"
+                            app:layout_constraintStart_toEndOf="@id/tv_calories_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines2"/>
+
+                        <View
+                            android:id="@+id/lines3"
+                            android:layout_width="600dp"
+                            android:layout_height="4dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_daily_value"
+                            app:layout_constraintTop_toBottomOf="@id/tv_calories_sapi" />
 
                         <TextView
-                            android:id="@+id/tv_line2"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tv_daily_value"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="-------------------------------------------"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_fat"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_calories"></TextView>
-
-                        <TextView
-                            android:id="@+id/tv_fat"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="53dp"
+                            android:layout_margin="2dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="Fat"
+                            android:gravity="end"
+                            android:text="% Daily Value*"
                             android:textAllCaps="false"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_protein"
-                            app:layout_constraintEnd_toStartOf="@id/tv_value_fat"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_line2"></TextView>
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines4"
+                            app:layout_constraintTop_toBottomOf="@id/lines3"/>
+
+                        <View
+                            android:id="@+id/lines4"
+                            android:layout_width="600dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_total_fat_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_daily_value" />
 
                         <TextView
-                            android:id="@+id/tv_value_fat"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="26dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="19g"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_protein"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@id/tv_fat"
-                            app:layout_constraintTop_toBottomOf="@id/tv_line2"></TextView>
-
-                        <TextView
-                            android:id="@+id/tv_protein"
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="50dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="Protein"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_sugar"
-                            app:layout_constraintEnd_toStartOf="@id/tv_value_protein"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_fat"></TextView>
-
-                        <TextView
-                            android:id="@+id/tv_value_protein"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="80dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="21g"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_sugar"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@id/tv_fat"
-                            app:layout_constraintTop_toBottomOf="@id/tv_fat"></TextView>
-
-                        <TextView
-                            android:id="@+id/tv_sugar"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="50dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="Sugar"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_carbo"
-                            app:layout_constraintEnd_toStartOf="@id/tv_value_sugar"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_protein"></TextView>
-
-                        <TextView
-                            android:id="@+id/tv_value_sugar"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="0g"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_carbo"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@id/tv_sugar"
-                            app:layout_constraintTop_toBottomOf="@id/tv_protein"></TextView>
-
-                        <TextView
-                            android:id="@+id/tv_carbo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="Carbohydrates"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_fiber"
-                            app:layout_constraintEnd_toStartOf="@id/tv_value_carbo"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_sugar"></TextView>
-
-                        <TextView
-                            android:id="@+id/tv_value_carbo"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tv_total_fat_sapi"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-black"
-                            android:text="0g"
-                            android:textAllCaps="false"
+                            android:text="Total Fat 17g"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_fiber"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@id/tv_carbo"
-                            app:layout_constraintTop_toBottomOf="@id/tv_sugar"></TextView>
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines5"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_calories_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines4" />
 
                         <TextView
-                            android:id="@+id/tv_fiber"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tv_value_totalfat_sapi"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="45dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="Fiber"
-                            android:textAllCaps="false"
+                            android:gravity="end"
+                            android:text="22%"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_line3"
-                            app:layout_constraintEnd_toStartOf="@id/tv_value_fiber"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_carbo"></TextView>
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines4"
+                            app:layout_constraintStart_toEndOf="@id/tv_total_fat_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines5"/>
+
+                        <View
+                            android:id="@+id/lines5"
+                            android:layout_width="600dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_saturated_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_total_fat_sapi" />
 
                         <TextView
-                            android:id="@+id/tv_value_fiber"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tv_saturated_sapi"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="sans-serif"
+                            android:text="Saturated Fat 6.8g"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines6"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_saturated_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines5" />
+
+                        <TextView
+                            android:id="@+id/tv_value_saturated_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-black"
-                            android:text="0g"
-                            android:textAllCaps="false"
+                            android:gravity="end"
+                            android:text="34%"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="@id/tv_line3"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@id/tv_fiber"
-                            app:layout_constraintTop_toBottomOf="@id/tv_carbo"
-                            app:layout_constraintVertical_bias="0.0"></TextView>
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines6"
+                            app:layout_constraintEnd_toStartOf="@id/tv_saturated_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines5" />
+
+                        <View
+                            android:id="@+id/lines6"
+                            android:layout_width="600dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_transfat_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_saturated_sapi" />
 
                         <TextView
-                            android:id="@+id/tv_line3"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tv_transfat_sapi"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="-------------------------------------------"
-                            android:textAllCaps="false"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="sans-serif"
+                            android:text="Trans Fat 0.6g"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toTopOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tv_fiber"></TextView>
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines7plus"
+                            app:layout_constraintTop_toBottomOf="@id/lines6" />
+
+                        <View
+                            android:id="@+id/lines7plus"
+                            android:layout_width="600dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_polyunsaturated_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_transfat_sapi" />
+
+                        <TextView
+                            android:id="@+id/tv_polyunsaturated_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="sans-serif"
+                            android:text="Polyunsaturated Fat 0.7g"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines7"
+                            app:layout_constraintTop_toBottomOf="@id/lines7plus" />
+
+                        <View
+                            android:id="@+id/lines7"
+                            android:layout_width="600dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_monounsaturated_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_polyunsaturated_sapi" />
+
+                        <TextView
+                            android:id="@+id/tv_monounsaturated_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="sans-serif"
+                            android:text="Monounsaturated Fat 7.4g"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines8"
+                            app:layout_constraintTop_toBottomOf="@id/lines7" />
+
+                        <View
+                            android:id="@+id/lines8"
+                            android:layout_width="600dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_cholesterol_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_monounsaturated_sapi" />
+
+                        <TextView
+                            android:id="@+id/tv_cholesterol_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Cholesterol 87mg"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines9"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_cholesterol_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines8" />
+
+                        <TextView
+                            android:id="@+id/tv_value_cholesterol_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="end"
+                            android:text="29%"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines8"
+                            app:layout_constraintStart_toEndOf="@id/tv_cholesterol_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines9" />
+
+                        <View
+                            android:id="@+id/lines9"
+                            android:layout_width="600dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_sodium_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_cholesterol_sapi" />
+
+                        <TextView
+                            android:id="@+id/tv_sodium_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Sodium 50mg"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines10"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_sodium_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines9" />
+
+                        <TextView
+                            android:id="@+id/tv_value_sodium_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="end"
+                            android:text="2%"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines9"
+                            app:layout_constraintStart_toEndOf="@id/tv_sodium_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines10" />
+
+                        <View
+                            android:id="@+id/lines10"
+                            android:layout_width="600dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_carbo_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_sodium_sapi" />
+
+                        <TextView
+                            android:id="@+id/tv_carbo_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Total Carbohydrates 0g"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines11"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_carbo_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines10" />
+
+                        <TextView
+                            android:id="@+id/tv_value_carbo_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="end"
+                            android:text="0%"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines10"
+                            app:layout_constraintStart_toEndOf="@id/tv_carbo_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines11" />
+
+                        <View
+                            android:id="@+id/lines11"
+                            android:layout_width="600dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_fiber_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_carbo_sapi" />
+
+                        <TextView
+                            android:id="@+id/tv_fiber_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="sans-serif"
+                            android:text="Dietary Fiber 0g"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines12"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_fiber_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines11" />
+
+                        <TextView
+                            android:id="@+id/tv_value_fiber_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="end"
+                            android:text="0%"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines11"
+                            app:layout_constraintStart_toEndOf="@id/tv_fiber_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines12" />
+
+                        <View
+                            android:id="@+id/lines12"
+                            android:layout_width="600dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_sugar_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_fiber_sapi" />
+
+                        <TextView
+                            android:id="@+id/tv_sugar_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="sans-serif"
+                            android:text="Sugar 0g"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines12plus"
+                            app:layout_constraintTop_toBottomOf="@id/lines12" />
+
+                        <View
+                            android:id="@+id/lines12plus"
+                            android:layout_width="600dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_protein_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_sugar_sapi" />
+
+                        <TextView
+                            android:id="@+id/tv_protein_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Protein 23.6g"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines13"
+                            app:layout_constraintTop_toBottomOf="@id/lines12plus" />
+
+                        <View
+                            android:id="@+id/lines13"
+                            android:layout_width="600dp"
+                            android:layout_height="6dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_vitd_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_protein_sapi" />
+
+                        <TextView
+                            android:id="@+id/tv_vitd_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="Vitamin D 0.2mcg"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines13plus"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_vitd_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines13" />
+
+                        <TextView
+                            android:id="@+id/tv_value_vitd_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="end"
+                            android:text="1%"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines13plus"
+                            app:layout_constraintStart_toEndOf="@id/tv_vitd_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines13" />
+
+                        <View
+                            android:id="@+id/lines13plus"
+                            android:layout_width="600dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_calcium_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_vitd_sapi" />
+
+                        <TextView
+                            android:id="@+id/tv_calcium_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="Calcium 13mg"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines14"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_calcium_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines13plus" />
+
+                        <TextView
+                            android:id="@+id/tv_value_calcium_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="end"
+                            android:text="1%"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines14"
+                            app:layout_constraintStart_toEndOf="@id/tv_calcium_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines13plus" />
+
+                        <View
+                            android:id="@+id/lines14"
+                            android:layout_width="600dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_iron_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_calcium_sapi" />
+
+                        <TextView
+                            android:id="@+id/tv_iron_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="Iron 2.2mg"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines15"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_iron_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines14" />
+
+                        <TextView
+                            android:id="@+id/tv_value_iron_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="end"
+                            android:text="12%"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines15"
+                            app:layout_constraintStart_toEndOf="@id/tv_iron_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines14" />
+
+                        <View
+                            android:id="@+id/lines15"
+                            android:layout_width="600dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_pottasium_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_iron_sapi" />
+
+                        <TextView
+                            android:id="@+id/tv_pottasium_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="Pottasium 271mg"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines16"
+                            app:layout_constraintEnd_toStartOf="@id/tv_value_pottasium_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines15" />
+
+                        <TextView
+                            android:id="@+id/tv_value_pottasium_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="end"
+                            android:text="6%"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines16"
+                            app:layout_constraintStart_toEndOf="@id/tv_pottasium_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/lines15" />
+
+                        <View
+                            android:id="@+id/lines16"
+                            android:layout_width="600dp"
+                            android:layout_height="6dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_cafein_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_pottasium_sapi" />
+
+                        <TextView
+                            android:id="@+id/tv_cafein_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Caffeine 0mg"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toTopOf="@id/lines17"
+                            app:layout_constraintTop_toBottomOf="@id/lines16" />
+
+                        <View
+                            android:id="@+id/lines17"
+                            android:layout_width="600dp"
+                            android:layout_height="3dp"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toTopOf="@id/tv_noted_sapi"
+                            app:layout_constraintTop_toBottomOf="@id/tv_cafein_sapi" />
+
+                        <TextView
+                            android:id="@+id/tv_noted_sapi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2000 calories a day is used for general nutrition advice."
+                            android:textAlignment="inherit"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/lines17" />
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -327,7 +651,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
             android:drawableLeft="@drawable/icon_info"
             android:fontFamily="sans-serif"
             android:letterSpacing="0.05"
