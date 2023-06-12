@@ -1,1 +1,2 @@
-# Bangkit-2023-C23-PS026
+# Mobile Developtment Team
+This repository contains Kotlin files to create the APK for Mobile Application (Android)
