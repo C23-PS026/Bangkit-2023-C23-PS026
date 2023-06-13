@@ -21,13 +21,6 @@ app.get("/", (req, res) => {
 app.use('/auth', auth)
 app.use('/uploadImage', uploadImage)
 
-// Needs to be the last
-app.get('*', (req, res) => {
-  res.json({
-    message: "Invalid URL",
-  });
-});
-
 app.listen(PORT, () => {
   console.log(`App is running on port ${PORT}`);
 });

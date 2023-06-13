@@ -6,7 +6,7 @@ const router = express.Router();
 
 const admin = require('firebase-admin')
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-const serviceAccount = require('../capstone-project-c23-ps026-5f96ca66c943.json')
+const serviceAccount = require('../serviceAccount.json')
 
 // const provider = new GoogleAuthProvider();
 
