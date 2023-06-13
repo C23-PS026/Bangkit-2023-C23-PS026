@@ -1,25 +1,61 @@
-const express = require('express')
-const router = express.Router()
+import {createRequire} from 'module'
+const require = createRequire(import.meta.url)
 
-const Users = []
+import express from "express";
+const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send('Halaman Sign In/Sign Up')
-})
+const admin = require('firebase-admin')
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+const serviceAccount = require('../capstone-project-c23-ps026-5f96ca66c943.json')
+
+// const provider = new GoogleAuthProvider();
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+});
 
 router.post('/', (req, res) => {
-    if (!req.body.username || !req.body.password) {
-        res.status('400')
-        res.send('Username or password invalid!')
-    } else {
-        Users.filter((user) => {
-            if (user.id === req.body.id) {
-                res.json({message: 'Username already exist!'})
-            }
-        })
-        const newUser = { username: req.body.username, password: req.body.password }
-        Users.push(newUser)
-        // req.session.user = newUser
-        // res.redirect('/protected_page')
+  const uidFromApp = req.query.uid
+
+  async function checkFirebaseUID(uid) {
+    try {
+      const userRecord = (await admin.auth().getUser(uid)).toJSON();
+      
+      return res.json({
+        message: "User exist",
+        userExist: true
+      });
+    } catch (err) {
+      return res.json({
+        error: err,
+        userExist: false
+      });
     }
-});
+  }
+  checkFirebaseUID(uidFromApp)
+})
+
+// router.post("/signin", (req, res) => {
+//   signInWithPopup(auth, provider)
+//     .then((result) => {
+//       // This gives you a Google Access Token. You can use it to access the Google API.
+//       const credential = GoogleAuthProvider.credentialFromResult(result);
+//       const token = credential.accessToken;
+//       // The signed-in user info.
+//       const user = result.user;
+//       // IdP data available using getAdditionalUserInfo(result)
+//       // ...
+//     })
+//     .catch((error) => {
+//       // Handle Errors here.
+//       const errorCode = error.code;
+//       const errorMessage = error.message;
+//       // The email of the user's account used.
+//       const email = error.customData.email;
+//       // The AuthCredential type that was used.
+//       const credential = GoogleAuthProvider.credentialFromError(error);
+//       // ...
+//     });
+// });
+
+export default router;
