@@ -6,14 +6,14 @@ const router = express.Router();
 
 const admin = require('firebase-admin')
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-const serviceAccount = require('../serviceAccount.json')
+/*const serviceAccount = require('../serviceAccount.json')
 
 // const provider = new GoogleAuthProvider();
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
-
+*/
 router.post('/', (req, res) => {
   const uidFromApp = req.query.uid
 
