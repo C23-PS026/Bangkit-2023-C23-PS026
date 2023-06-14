@@ -1,7 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 import auth from './routes/auth.js'
 import uploadImage from './routes/uploadImage.js'
 import { initializeApp } from "firebase/app";
