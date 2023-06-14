@@ -10,6 +10,6 @@ RUN npm install --only=production
 
 COPY . .
 
-EXPOSE $PORT
+EXPOSE 8080
 
 CMD [ "node", "app.js"]

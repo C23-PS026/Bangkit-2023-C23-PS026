@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "252615125077",
+    "firebase_url": "https://capstone-project-c23-ps026-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "capstone-project-c23-ps026",
+    "storage_bucket": "capstone-project-c23-ps026.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252615125077:android:4a773c829ef70be5af4cdc",
+        "android_client_info": {
+          "package_name": "com.capstoneproject.meatfyi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "252615125077-p64te3g26fd3d2pn8r6g38tc5v51tivc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.capstoneproject.meatfyi",
+            "certificate_hash": "51e037c922ebcfb816a6434ff0bf9e50213ee400"
+          }
+        },
+        {
+          "client_id": "252615125077-gv4c73p4sv9qcidu73u943miq4o5a8a9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLKfU1YRHquFP0Q3CzjmI6FHKbZthwGlo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "252615125077-gv4c73p4sv9qcidu73u943miq4o5a8a9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
