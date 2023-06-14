@@ -1,9 +1,9 @@
-import express from 'express'
-import cors from 'cors'
+import express from 'express';
+import cors from 'cors';
 const app = express();
 const PORT = process.env.PORT || 8080;
-import auth from './routes/auth.js'
-import uploadImage from './routes/uploadImage.js'
+import auth from './routes/auth.js';
+import uploadImage from './routes/uploadImage.js';
 import { initializeApp } from "firebase/app";
 import firebaseConfig from "./config/firebase.config.js";
 
@@ -19,9 +19,10 @@ app.get("/", (req, res) => {
   });
 });
 
-app.use('/auth', auth)
-app.use('/uploadImage', uploadImage)
+app.use('/auth', auth);
+app.use('/uploadImage', uploadImage);
 
 app.listen(PORT, () => {
   console.log(`App is running on port ${PORT}`);
 });
+
