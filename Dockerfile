@@ -3,7 +3,7 @@ FROM --platform=linux/amd64 node:18
 WORKDIR /usr/src/app
 
 ENV HOST = 0.0.0.0
-PORT = 8080
+PORT = default
 
 COPY package*.json ./
 
