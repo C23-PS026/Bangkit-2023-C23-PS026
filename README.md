@@ -1,4 +1,4 @@
-# MeatFYI
+<h1 align=center>MeatFYI</h1>
 
 This Repository consist of Machine learning, Mobile Development and Cloud Computing files stored in each branch below:
 
