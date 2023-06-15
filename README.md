@@ -6,7 +6,7 @@ As Cloud Computing Team, we build RESTful API to store captured image by user fr
 
 These are the frameworks and dependencies used in the application:
 
-- NodeJS `Node v18.15.0 & npm v9.6.3`
+- NodeJS (`Node v18.15.0 & npm v9.6.3`)
 - Express
 - Firebase (Storage)
 - Docker
