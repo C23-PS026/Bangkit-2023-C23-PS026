@@ -4,7 +4,7 @@ const require = createRequire(import.meta.url)
 const dotenv = require('dotenv')
 dotenv.config();
 
-export default {
+const firebaseConfig = {
   apiKey: process.env.API_KEY,
   authDomain: process.env.AUTH_DOMAIN,
   databaseURL: process.env.DATABASE_URL,
@@ -14,3 +14,5 @@ export default {
   appId: process.env.APP_ID,
   measurementId: process.env.MEASUREMENT_ID,
 };
+
+export default firebaseConfig
