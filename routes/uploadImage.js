@@ -33,14 +33,14 @@ router.post("/", upload.single("image"), async (req, res) => {
 
     const url = await getDownloadURL(snapshot.ref);
 
-    return res.json({
+    return res.status(200).json({
       message: "File succesfully uploaded",
       name: req.file.originalname,
       type: req.file.mimetype,
       url: url,
     });
   } catch (err) {
-    return res.status(400).json({
+    return res.status(500).json({
       message: "Upload failed",
       error: err.message,
     });
