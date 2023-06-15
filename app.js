@@ -20,7 +20,9 @@ app.get("/", (req, res) => {
 });
 
 app.get('/startup', (req, res) => {
-  res.statusCode(200)
+  res.json({
+    message: "Success"
+  })
 })
 
 app.use('/auth', auth);
