@@ -2,13 +2,12 @@ import express from 'express';
 import cors from 'cors';
 const app = express();
 const PORT = process.env.PORT || 8080;
-import auth from './routes/auth.js';
+// import auth from './routes/auth.js';
 import uploadImage from './routes/uploadImage.js';
 import { initializeApp } from "firebase/app";
 import firebaseConfig from "./config/firebase.config.js";
 
 initializeApp(firebaseConfig);
-console.log(firebaseConfig)
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -25,7 +24,7 @@ app.get('/startup', (req, res) => {
   })
 })
 
-app.use('/auth', auth);
+// app.use('/auth', auth);
 app.use('/uploadImage', uploadImage);
 
 app.listen(PORT, () => {
