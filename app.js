@@ -8,7 +8,6 @@ import { initializeApp } from "firebase/app";
 import firebaseConfig from "./config/firebase.config.js";
 
 initializeApp(firebaseConfig);
-console.log(firebaseConfig)
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
