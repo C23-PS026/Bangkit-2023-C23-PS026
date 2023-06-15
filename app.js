@@ -19,6 +19,10 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get('/startup', (req, res) => {
+  res.statusCode(200)
+})
+
 app.use('/auth', auth);
 app.use('/uploadImage', uploadImage);
 
