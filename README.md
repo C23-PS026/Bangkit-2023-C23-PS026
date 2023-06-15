@@ -25,9 +25,13 @@ API application runs on Google Cloud Run with the following description:
 - **POST** `/uploadImage` | Upload captured image to Firebase Storage
   - **Request:**
     >File:Image
+
   - **Response:**
+
     <details markdown=span>
-    <summary markdown=span>__200 Successful__</summary>
+  
+    <summary markdown=span><b>200</b> Successful</summary>
+  
     ```JSON
     {
       "message": "File succesfully uploaded",
@@ -36,14 +40,18 @@ API application runs on Google Cloud Run with the following description:
       "url": "https://firebasestorage.googleapis.com/v0/b/capstone-project-c23-ps026.appspot.com/o/images%2F822E8AA99C97C34885FFAA65E9B576A3A589AD7E.jpg?alt=media&token=7caa2e5b-13e4-40ba-a2e1-fc50cde2f878"
     }
     ```
+  
     </details>
     
     <details markdown=span>
-    <summary markdown=span>__500 Failed to process request due to server or application error__</summary>
+  
+    <summary markdown=span><b>500</b> Failed to process request due to server or application error</summary>
+  
     ```JSON
     {
       "message": "Upload failed",
       "error": "Cannot read properties of undefined (reading 'originalname')"
     }
     ```
+  
     </details>
