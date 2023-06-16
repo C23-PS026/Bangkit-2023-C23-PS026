@@ -24,11 +24,7 @@ RUN npm install
 
 RUN npm install @tensorflow/tfjs-node
 
-# Copy the server.js file
-COPY server.js .
-
-# Copy the model.tflite file
-COPY model.tflite .
+COPY . .
 
 # Expose the port
 EXPOSE 8080
