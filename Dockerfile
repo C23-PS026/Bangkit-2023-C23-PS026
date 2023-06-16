@@ -22,6 +22,8 @@ COPY package*.json ./
 # Install the dependencies
 RUN npm install
 
+RUN npm install @tensorflow/tfjs-node
+
 # Copy the server.js file
 COPY server.js .
 

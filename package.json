@@ -7,7 +7,6 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "tfjs-node": "^3.13.0",
     "mime": "^2.5.3"
   },
   "main": "server.js",
