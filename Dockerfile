@@ -1,3 +1,12 @@
+FROM python:3
+
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir nibabel pydicom matplotlib pillow med2image
+    # Note: we had to merge the two "pip install" package lists here, otherwise
+    # the last "pip install" command in the OP may break dependency resolution…
+
+CMD ["cat", "/etc/os-release"]
+
 # Use the official Node.js 14 image as the base
 FROM --platform=linux/amd64 node:14
 

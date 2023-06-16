@@ -1,5 +1,5 @@
 {
-  "name": "tflite-cloud-run",
+  "name": "tflite-detection-api",
   "version": "1.0.0",
   "description": "Hosting TensorFlow Lite model on Cloud Run",
   "scripts": {
@@ -9,5 +9,9 @@
     "express": "^4.17.1",
     "tfjs-node": "^3.13.0",
     "mime": "^2.5.3"
-  }
+  },
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
