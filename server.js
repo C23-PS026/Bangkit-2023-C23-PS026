@@ -5,7 +5,7 @@ const fs = require('fs');
 
 const app = express();
 const port = process.env.PORT || 8080;
-const modelPath = 'https://storage.cloud.google.com/meat-classification-model-001/meat_classification_model%20(2).tflite?authuser=2';
+const modelPath = 'https://storage.googleapis.com/meat-classification-model-001/model.tflite';
 
 const model = fs.readFileSync(modelPath);
 const interpreter = tf.createInterpreter(model);
