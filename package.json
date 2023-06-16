@@ -1,0 +1,13 @@
+{
+  "name": "tflite-cloud-run",
+  "version": "1.0.0",
+  "description": "Hosting TensorFlow Lite model on Cloud Run",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "tfjs-node": "^3.13.0",
+    "mime": "^2.5.3"
+  }
+}
