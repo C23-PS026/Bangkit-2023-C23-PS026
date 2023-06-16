@@ -27,6 +27,7 @@ android {
     }
 
     buildFeatures {
+        mlModelBinding true
         viewBinding true
     }
     compileOptions {
@@ -47,6 +48,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:22.0.0'
     implementation 'com.google.firebase:firebase-database-ktx:20.2.2'
     implementation 'com.google.firebase:firebase-database:20.2.2'
+    implementation 'com.google.firebase:firebase-storage:20.2.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -68,4 +70,17 @@ dependencies {
 
     //circle image
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //model in firebase
+    implementation 'com.google.firebase:firebase-core:19.0.0'
+    implementation 'com.google.firebase:firebase-ml-modeldownloader-ktx'
+    implementation 'org.tensorflow:tensorflow-lite:2.3.0'
+    //implementation 'com.google.firebase:firebase-ml-model-interpreter:22.0.0'
+
+    //model tflite
+    implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
+    implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0'
+
+    //http client
+    implementation "com.squareup.okhttp3:okhttp:4.9.0"
 }
