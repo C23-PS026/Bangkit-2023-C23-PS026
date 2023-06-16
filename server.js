@@ -1,5 +1,5 @@
 const express = require('express');
-const tf = require('tfjs-node');
+const tf = require('@tensorflow/tfjs-node');
 const mime = require('mime');
 const fs = require('fs');
 
